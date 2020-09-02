@@ -6,8 +6,8 @@ header:
 
 
 team:
-    title: "Servicios"
-    text: "Conoce nuestros servicios a tu alcance!"
+    title: "Nuestro equipo!"
+    text: "Conoce a nuestros profesionales! Dale click sobre un perfil para mayor información."
     section: team
     closebutton: "Volver"
     

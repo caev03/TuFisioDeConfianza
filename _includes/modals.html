@@ -1,31 +1,47 @@
 <!-- team Modals -->
 {% for project in site.team %}
-  <div class="team-modal modal fade" id="p{{ forloop.index }}" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
+<div class="team-modal modal fade" id="p{{ forloop.index }}" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="close-modal" data-dismiss="modal">
+        <div class="lr">
+          <div class="rl"></div>
         </div>
-        <div class="container">
+      </div>
+      <div class="container">
+        <div class="modal-body">
           <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">{{ project.title }}</h2>
-                <p class="item-intro text-muted">{{ project.subtitle }}</p>
-                <img class="img-fluid d-block mx-auto" src="{{ project.image }}" alt="{{ project.alt }}">
-				<p>{{ project.content }}</p>		
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  {{ site.data.sitetext.team.closebutton | default: "Close Project" }}</button>
-              </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-4">
+              <img class="img-fluid d-block mx-auto" src="{{ project.image }}" alt="{{ project.alt }}">
+            </div>
+            <div class="col-lg-6">
+              <!-- Project Details Go Here -->
+              <h2 class="text-uppercase">{{ project.title }}</h2>
+              <p class="item-intro text-muted">{{ project.subtitle }} - {{ project.ciudad }}</p>
+              <p class="item-intro text-muted">Costo Sesión: {{ project.costoSesion }}</p>
+              <!-- <form method="get" action=""> -->
+                <button class="btn btn-primary" type="button" onclick="location.href='https://api.whatsapp.com/send?phone=+57{{project.celular}}';"><i class="fab fa-whatsapp"></i> Contactar</button>
+              <!-- </form> -->
+            </div>
+            <div class="col-lg-1"></div>
+          </div>
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <p>{{ project.content }}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <button class="btn btn-primary" data-dismiss="modal" type="button">
+                <i class="fas fa-times"></i>
+                {{ site.data.sitetext.team.closebutton | default: "Close Project" }}</button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 {% endfor %}
 <!-- End team Modals -->
