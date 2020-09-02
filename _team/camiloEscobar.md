@@ -21,7 +21,7 @@ Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur 
 
 # Zona de trabajo
 
-<img class="img-fluid d-block mx-auto" src="https://maps.googleapis.com/maps/api/staticmap?size=600x400&path=color:0x00000000|weight:7|fillcolor:0xFFFF0066|4.596198,%20-74.113558|4.564577,%20-74.079431|4.620447,%20-74.059508|4.625134,%20-74.082993&key=AIzaSyCz0PFOK1H8nRZGsOmWbewikvRsCO3i6VQ" alt="{{ project.alt }}">
+<img class="img-fluid d-block mx-auto" src="assets/img/zonas/centro.png" alt="{{ project.alt }}">
 
 # Calendario de horarios disponibles
 
